@@ -37,6 +37,62 @@
         background: #d4d7dc;
         border-color: #979797 !important;
         padding: 16px 0;
+        height: 46px;
+        justify-content: center;
+      }
+      .fc-toolbar-title {
+        font-size: 16px !important;
+        color: #21abf6;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 4px 0;
+        margin-top: -5px;
+      }
+      .fc-button-primary {
+        color: #000 !important;
+        background: transparent !important;
+        text-transform: capitalize !important;
+      }
+      .fc-button-primary:hover,
+      .fc-button-primary:active,
+      .fc-dayGridMonth-button:active,
+      .fc-listMonth-button:active {
+        box-shadow: none !important;
+      }
+      .fc-next-button,
+      .fc-prev-button {
+        border: none !important;
+      }
+      .fc-dayGridMonth-button,
+      .fc-listMonth-button {
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+        border-bottom: 5px solid transparent !important;
+      }
+      .fc-button-active {
+        font-weight: bold !important;
+        border-bottom: 5px solid #21abf6 !important;
+        top: 0px !important;
+      }
+
+      .fc-button-group .fc-button {
+        border-radius: 0 !important;
+      }
+      button.fc-dayGridMonth-button:after {
+        content: "" !important;
+        right: -15px !important;
+        font-size: 21px !important;
+        border-right: 1px solid #c7cace !important;
+        padding-left: 0 !important;
+        position: relative !important;
+        font-size: 15px !important;
+      }
+      .fc-day-today {
+        background: transparent !important;
+      }
+      .fc-list-event:hover {
+        background: red !important;
       }
     </style>
     <div id="root"></div>

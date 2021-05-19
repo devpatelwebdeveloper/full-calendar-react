@@ -22,14 +22,10 @@ export default function Calendar() {
     );
   };
   const handleDateClick = (arg) => {
+    arg.jsEvent.preventDefault();
     setIsOpen(true);
-    // bind with an arrow function
-    arg.jsEvent.preventDefault(); // don't let the browser navigate
-    console.log(arg.event);
-    console.log(arg.event.extendedProps);
     setModalTitle(arg.event.title);
     setModalContent(arg.event.extendedProps.description);
-    // console.log(arg.event.extendedProps.description);
   };
   const setting = {
     plugins: [
@@ -40,12 +36,8 @@ export default function Calendar() {
     ],
     //Main Key
     googleCalendarApiKey: "AIzaSyDKS2Z9aYCGH2TZ0GzCl406J15YrabaDKM",
-    //Personal Key
-    // googleCalendarApiKey: "AIzaSyC4wovE09hJkGy7mG4QGlwVzdeu0uLDhro",
+
     eventSources: [
-      // {
-      //   googleCalendarId: "en.usa#holiday@group.v.calendar.google.com"
-      // },
       {
         googleCalendarId:
           "31a7cjp8qn3pcst83gfb6t39do@group.calendar.google.com",
@@ -57,7 +49,8 @@ export default function Calendar() {
     headerToolbar: {
       left: "prev,next today",
       center: "title",
-      right: "dayGridMonth,listMonth"
+      right: ""
+      // right: "dayGridMonth,listYear"
     },
     eventTimeFormat: {
       hour: "numeric",
