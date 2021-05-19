@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import ReactDom from "react-dom";
 import styles from "./Modal.module.scss";
 
-export default function Modal({ open, children, onClose }) {
+export default function CalendarModal({ open, children, onClose }) {
   const ref = useRef();
   if (!open) return null;
 

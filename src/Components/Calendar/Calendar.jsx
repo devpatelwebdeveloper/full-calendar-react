@@ -5,7 +5,7 @@ import listPlugin from "@fullcalendar/list";
 import interactionPlugin from "@fullcalendar/interaction"; // needed for dayClick
 import googleCalendarPlugin from "@fullcalendar/google-calendar";
 import styles from "./Calendar.module.scss";
-import Modal from "../Modal/Modal";
+import CalendarModal from "../Modal/Modal";
 
 export default function Calendar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -69,10 +69,10 @@ export default function Calendar() {
   return (
     <>
       <FullCalendar {...setting} />
-      <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+      <CalendarModal open={isOpen} onClose={() => setIsOpen(false)}>
         <div className={styles.modalTitle}>{modalTitle}</div>
         <div dangerouslySetInnerHTML={{ __html: modalContent }}></div>
-      </Modal>
+      </CalendarModal>
     </>
   );
 }
